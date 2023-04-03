@@ -1,0 +1,14 @@
+.card-header
+{
+    background-color: rgb(30, 178, 178);
+}
+
+#btn-1-carousel
+{
+    position: relative;
+}
+
+.btn btn-info
+{
+    padding-right: 100px;
+}
