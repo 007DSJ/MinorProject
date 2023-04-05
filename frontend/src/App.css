@@ -14,19 +14,20 @@
 }
 .login-home
 {
-    margin-left: 20px;
+    
+    align-items: flex-end;
+    margin-left:10px;
 }
 .signup-home
 {
-    margin-left: 1020px;
+    align-items: flex-end; 
+    margin-left: 135vh;
 }
-#green
+.navbar .navbar-nav .nav-item a
 {
-    color: #ffffff;
-    text-decoration: none;
+    padding: 15px;
 }
-#green1
+.navbar .navbar-nav .nav-but
 {
-    color: #ffffff;
-    text-decoration: none;
+    padding: 5px;
 }
