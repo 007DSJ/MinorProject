@@ -31,7 +31,7 @@ function Login() {
 
     return (<div><div class="row">
         <div class="col-6 offset-3">
-            <h1 class="text-center">Sign In</h1>
+            <h1 class="text-center">Log In</h1>
             <form action="/login" class="needs-validation" noValidate method="POST" onSubmit={handleSubmit}>
                 <div class="mb-3">
                     <label class="form-label" for="username">Username</label>
