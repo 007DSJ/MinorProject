@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import authService from "../services/authService";
+import "../App";
 
 function Navbar() {
   function handleLogOut(e) {
@@ -28,18 +29,23 @@ function Navbar() {
               <a className="nav-link" href="#">All</a>
             </li>
             {!token && (
-              <li className="nav-item">
-                <a className="nav-link" href="/login">Login</a>
+            <li className="signup-home">
+            <button type="button" class="btn btn-outline-secondary"><a id = "green1" href="/SignUp">Sign Up</a></button>
+            </li>
+            )}
+            {!token && (
+              <li className="login-home">
+                <button type="button" class="btn btn-outline-success"><a id = "green" href="/login">Login</a></button>
+
               </li>
+              
             )}
             {token && (
               <li className="nav-item">
                 <a className="nav-link" onClick={handleLogOut}>Logout</a>
               </li>
+              
             )}
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
-            </li>
           </ul>
         </div>
       </div>
