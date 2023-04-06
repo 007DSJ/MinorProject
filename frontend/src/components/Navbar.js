@@ -25,8 +25,8 @@ function Navbar() {
             <li class="nav-item">
               <a class="nav-link active" href="#">Link</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active">Disabled</a>
+            <li className="nav-item">
+              <a className="nav-link" href="/services">Services</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
