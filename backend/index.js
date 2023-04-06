@@ -9,7 +9,7 @@ const passport = require('passport');
 const passportLocal = require('passport-local').Strategy;
 const passportJWT = require('passport-jwt').Strategy;
 const extractJWT = require('passport-jwt').ExtractJwt;
-const dbUrl = 'mongodb://localhost:27017/minorproject';
+const dbUrl = 'mongodb://127.0.0.1:27017/minorproject';
 
 const jwtSecret = 'minorproject';
 const secret = 'secrethaivronahibataaunga';
