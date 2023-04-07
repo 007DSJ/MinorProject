@@ -7,7 +7,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import Servicep from './components/Servicep';
+import Services from './components/Services';
+import AddMover from './components/AddMover';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,9 +17,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<App />} />
-        <Route path='services' element={<Servicep/>}/>
+        <Route path='services' element={<Services/>}/>
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<SignUp />} />
+        <Route path='addmover' element={<AddMover />} />
       </Routes>
     </BrowserRouter>
     <Footer />

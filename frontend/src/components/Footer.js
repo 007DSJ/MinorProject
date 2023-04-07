@@ -8,7 +8,7 @@ function Footer() {
                     <span>Connect With Us</span>
                 </div>
                 <div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                     <a href="" class="me-4 text-reset"><i class="fa fa-facebook-f"></i></a>
                     <a href="" class="me-4 text-reset"><i class="fa fa-twitter"></i></a>
                     <a href="" class="me-4 text-reset"><i class="fa fa-google"></i></a>

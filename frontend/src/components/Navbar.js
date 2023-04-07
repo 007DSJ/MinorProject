@@ -23,10 +23,10 @@ function Navbar() {
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Link</a>
+              <a class="nav-link active" href="/services">Services</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/services">Services</a>
+            <li class="nav-item">
+              <a class="nav-link active">Disabled</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

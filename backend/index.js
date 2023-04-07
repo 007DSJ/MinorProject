@@ -17,6 +17,7 @@ const secret = 'secrethaivronahibataaunga';
 app.use(session({ secret, saveUninitialized: true, resave: false }));
 
 const User = require('./models/user');
+const Mover = require('./models/mover');
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -98,6 +99,18 @@ app.post('/login', passport.authenticate('local'), catchAsync(async (req, res, n
         },
         err => next(err)
     )
+}))
+
+app.get('/movers', catchAsync(async (req, res) => {
+    const movers = await Mover.find({});
+    res.send(movers);
+}))
+
+app.post('/movers', catchAsync(async (req, res) => {
+    const mover = new Mover(req.body);
+    mover.img = 'https://source.unsplash.com/collection/3850816/360x240';
+    await mover.save();
+    res.send('Done');
 }))
 
 app.listen(port, () => {
