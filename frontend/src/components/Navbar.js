@@ -26,23 +26,23 @@ function Navbar() {
               <a class="nav-link active" href="/services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active">Disabled</a>
+              <a class="nav-link active" href="#">Test</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             {!token && (
               <li class="nav-but">
-                <a id="green" class="btn btn-secondary" href="/signup">SignUp</a>
+                <a class="btn btn-secondary" href="/signup">SignUp</a>
               </li>
             )}
             {!token && (
               <li class="nav-but">
-                <a id="green" class="btn btn-success" href="/login">Login</a>
+                <a class="btn btn-success" href="/login">Login</a>
               </li>
             )}
             {token && (
               <li className="nav-item">
-                <a className="nav-link" onClick={handleLogOut}>Logout</a>
+                <a className="btn btn-danger" onClick={handleLogOut}>Logout</a>
               </li>
 
             )}

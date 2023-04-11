@@ -1,0 +1,146 @@
+[
+    {
+        "name": "AN",
+        "label": "Andaman and Nicobar Islands"
+    },
+    {
+        "name": "AP",
+        "label": "Andhra Pradesh"
+    },
+    {
+        "name": "AR",
+        "label": "Arunachal Pradesh"
+    },
+    {
+        "name": "AS",
+        "label": "Assam"
+    },
+    {
+        "name": "BR",
+        "label": "Bihar"
+    },
+    {
+        "name": "CG",
+        "label": "Chandigarh"
+    },
+    {
+        "name": "CH",
+        "label": "Chhattisgarh"
+    },
+    {
+        "name": "DH",
+        "label": "Dadra and Nagar Haveli"
+    },
+    {
+        "name": "DD",
+        "label": "Daman and Diu"
+    },
+    {
+        "name": "DL",
+        "label": "Delhi"
+    },
+    {
+        "name": "GA",
+        "label": "Goa"
+    },
+    {
+        "name": "GJ",
+        "label": "Gujarat"
+    },
+    {
+        "name": "HR",
+        "label": "Haryana"
+    },
+    {
+        "name": "HP",
+        "label": "Himachal Pradesh"
+    },
+    {
+        "name": "JK",
+        "label": "Jammu and Kashmir"
+    },
+    {
+        "name": "JH",
+        "label": "Jharkhand"
+    },
+    {
+        "name": "KA",
+        "label": "Karnataka"
+    },
+    {
+        "name": "KL",
+        "label": "Kerala"
+    },
+    {
+        "name": "LD",
+        "label": "Lakshadweep"
+    },
+    {
+        "name": "MP",
+        "label": "Madhya Pradesh"
+    },
+    {
+        "name": "MH",
+        "label": "Maharashtra"
+    },
+    {
+        "name": "MN",
+        "label": "Manipur"
+    },
+    {
+        "name": "ML",
+        "label": "Meghalaya"
+    },
+    {
+        "name": "MZ",
+        "label": "Mizoram"
+    },
+    {
+        "name": "NL",
+        "label": "Nagaland"
+    },
+    {
+        "name": "OR",
+        "label": "Odisha"
+    },
+    {
+        "name": "PY",
+        "label": "Puducherry"
+    },
+    {
+        "name": "PB",
+        "label": "Punjab"
+    },
+    {
+        "name": "RJ",
+        "label": "Rajasthan"
+    },
+    {
+        "name": "SK",
+        "label": "Sikkim"
+    },
+    {
+        "name": "TN",
+        "label": "Tamil Nadu"
+    },
+    {
+        "name": "TS",
+        "label": "Telangana"
+    },
+    {
+        "name": "TR",
+        "label": "Tripura"
+    },
+    {
+        "name": "UK",
+        "label": "Uttarakhand"
+    },
+    {
+        "name": "UP",
+        "label": "Uttar Pradesh"
+    },
+    {
+        "name": "WB",
+        "label": "West Bengal"
+    }
+]
