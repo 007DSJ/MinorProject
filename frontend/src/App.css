@@ -1,39 +1,103 @@
-.card-header
-{
+#rating {
+    color: orange;
+}
+
+.card-header {
     background-color: rgb(30, 178, 178);
 }
 
-#btn-1-carousel
-{
+#btn-1-carousel {
     position: relative;
 }
 
-.btn btn-info
-{
+.btn btn-info {
     padding-right: 100px;
 }
-.login-home
-{
-    
+
+.login-home {
+
     align-items: flex-end;
-    margin-left:10px;
+    margin-left: 10px;
 }
-.signup-home
-{
-    align-items: flex-end; 
+
+.signup-home {
+    align-items: flex-end;
     margin-left: 135vh;
 }
-.navbar .navbar-nav .nav-item a
-{
+
+.navbar .navbar-nav .nav-item a {
     padding: 15px;
 }
-.navbar .navbar-nav .nav-but
-{
+
+.navbar .navbar-nav .nav-but {
     padding: 5px;
 }
 
-/*Rating*/
-#rating
-{
-    color: orange;
+.merge {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 27%;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBox {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+}
+
+.searchContainer {
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+}
+
+.dropDown {
+    width: 99%;
+    background-color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* border: 1px solid gray; */
+    margin-top: 5px;
+    /* width: 300px; */
+    /* height: 200px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dropDown:empty {
+    border: none;
+}
+
+.dropDownRow {
+    cursor: pointer;
+    text-align: start;
+    padding: 5px;
+}
+
+.dropDownRow:hover {
+    background-color: lightgray;
+}
+
+input {
+    height: 50px;
+    width: 20vw;
+}
+
+.searchInner {
+    display: flex;
+}
+
+#inp {
+    padding-left: 10px;
+}
+
+#but {
+    height: 50px;
+    border-radius: 1px;
 }
