@@ -26,7 +26,7 @@ function Navbar() {
               <a class="nav-link active" href="/services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Test</a>
+              <a class="nav-link active" href="/checkout">CheckOut</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
