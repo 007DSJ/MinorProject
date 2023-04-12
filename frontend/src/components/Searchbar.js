@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import Data from "./Data.json";
 
-function Searchbar({placeholder}) {
-  const [value, setValue] = useState(" ");
+function Searchbar({ placeholder, setOrigin, setDestination, num }) {
+  const [value, setValue] = useState("");
   const onChange = (e) => {
     setValue(e.target.value);
   }
-  const onSearch = (searchTerm) => {
+  const onSearch = (searchTerm, code) => {
     setValue(searchTerm);
-    console.log(searchTerm)
+    if (num === '1') {
+      setOrigin(code)
+    } else if (num === '2') {
+      setDestination(code)
+    }
   }
   return (
     <div className='searchContainer'>
@@ -22,11 +26,11 @@ function Searchbar({placeholder}) {
           const place = item.label.toLocaleLowerCase();
           return searchTerm && place.startsWith(searchTerm) && place !== searchTerm;
         })
-        // .slice(0,5) (to be used when dropdown is very long)
-        .map((item) => (
-          <div onClick={()=>onSearch(item.label)} className='dropDownRow' key={item.label}>{item.label}
-          </div>
-        ))}
+          // .slice(0,5) (to be used when dropdown is very long)
+          .map((item) => (
+            <div onClick={() => onSearch(item.label, item.name)} className='dropDownRow' key={item.label}>{item.label}
+            </div>
+          ))}
       </div>
     </div>
   )

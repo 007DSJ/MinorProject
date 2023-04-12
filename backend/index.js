@@ -102,8 +102,14 @@ app.post('/login', passport.authenticate('local'), catchAsync(async (req, res, n
 }))
 
 app.get('/movers', catchAsync(async (req, res) => {
-    const movers = await Mover.find({});
-    res.send(movers);
+    const { origin, destination } = req.query;
+    if (origin && destination) {
+        const result = await Mover.find({ states: { $all: [origin, destination] } });
+        res.send(result);
+    } else {
+        const movers = await Mover.find({});
+        res.send(movers);
+    }
 }))
 
 app.post('/movers', catchAsync(async (req, res) => {

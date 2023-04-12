@@ -6,22 +6,24 @@ import '../App.css'
 
 function Services() {
   const [movers, setMovers] = useState([]);
+  const params = new URLSearchParams(window.location.search);
+  const origin = params.get('origin');
+  const destination = params.get('destination');
   const navigate = useNavigate();
-
 
   function handleClick() {
     navigate('/addmover');
   }
 
   const fetchMovers = async () => {
-    const response = await axios("/movers");
+    const response = await axios("/movers", { params: { origin, destination } });
     setMovers(response.data);
     //console.log(response.data);
     //console.log(movers);
   }
   useEffect(() => {
     fetchMovers()
-  }, [])
+  }, [origin, destination])
   return (<div className="container my-3">
     {movers.map((mover) => (
       <MoverCard

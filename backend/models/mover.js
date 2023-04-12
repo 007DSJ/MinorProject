@@ -14,7 +14,10 @@ const moverSchema = new Schema({
     img: {
         type: String,
         required: true
-    }
+    },
+    states: [{
+        type: String
+    }]
 })
 
 module.exports = mongoose.model('Mover', moverSchema);
