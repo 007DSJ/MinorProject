@@ -101,3 +101,22 @@ input {
     height: 50px;
     border-radius: 1px;
 }
+
+#lc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#big {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    border-radius: 5px;
+}
+
+#mango {
+    background-color: white;
+    border-radius: 20px;
+}
+#mango1{
+    border-radius: 20px;
+}
