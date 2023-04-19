@@ -10,6 +10,7 @@ import SignUp from './components/SignUp';
 import Services from './components/Services';
 import AddMover from './components/AddMover';
 import CheckOut from './components/CheckOut';
+import MoverView from './components/MoverView';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path='signup' element={<SignUp />} />
         <Route path='addmover' element={<AddMover />} />
         <Route path='checkout' element={<CheckOut />} />
+        <Route path='services/:id' element={<MoverView/>} />
       </Routes>
     </BrowserRouter>
     <Footer />

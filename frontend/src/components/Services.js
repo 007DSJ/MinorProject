@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import MoverCard from './MoverCard';
+import MoverView from './MoverView';
 import '../App.css'
 
 function Services() {
