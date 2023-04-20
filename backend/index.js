@@ -112,6 +112,24 @@ app.get('/movers', catchAsync(async (req, res) => {
     }
 }))
 
+app.get('/movers/:id', catchAsync(async (req, res) => {
+    try {
+        const { id } = req.params;
+        const mover = await Mover.findById(id);
+        if (!mover) {
+            return res.status(404).send('Mover not found');
+        }
+        res.send(mover);
+    } catch (err) {
+        if (err.name === 'CastError') {
+            return res.status(404).send('Invalid mover ID');
+        }
+        // Handle other errors here
+        console.error(err);
+        res.status(500).send('Internal server error');
+    }
+}))
+
 app.post('/movers', catchAsync(async (req, res) => {
     const mover = new Mover(req.body);
     mover.img = 'https://source.unsplash.com/collection/3850816/360x240';

@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function MoverCard(props) {
+    const navigate = useNavigate();
+    function handleClick(e) {
+        e.preventDefault();
+        navigate(`/services/${props.id}`)
+    }
+
     return (
         <div class="card mb-3 mt-3 ms-3 me-3">
             <div class="row g-0">
@@ -11,7 +18,7 @@ function MoverCard(props) {
                     <div class="card-body">
                         <h5 class="card-title">{props.name}</h5>
                         <p class="card-text">{props.desc}</p>
-                        <button type="button" class="btn btn-primary">View</button>
+                        <button type="button" class="btn btn-primary" onClick={handleClick}>View</button>
                     </div>
                     <div class="rating">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
