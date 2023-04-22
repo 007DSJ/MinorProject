@@ -16,8 +16,12 @@ function Services() {
   }
 
   const fetchMovers = async () => {
-    const response = await axios("/movers", { params: { origin, destination } });
-    setMovers(response.data);
+    try {
+      const response = await axios("/movers", { params: { origin, destination } });
+      setMovers(response.data);
+    } catch (err) {
+      console.log(err);
+    }
     //console.log(response.data);
     //console.log(movers);
   }
@@ -32,6 +36,8 @@ function Services() {
         desc={mover.description}
         key={mover._id}
         id={mover._id}
+        origin={origin}
+        destination={destination}
       />
     ))}
     <button className="btn btn-info" onClick={handleClick}>Add new</button>

@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
 import Data from "./Data.json";
 
-function Searchbar({ placeholder, setOrigin, setDestination, num }) {
-  const [value, setValue] = useState("");
+function Searchbar({ placeholder, setValue, value, setCode}) {
   const onChange = (e) => {
     setValue(e.target.value);
   }
   const onSearch = (searchTerm, code) => {
     setValue(searchTerm);
-    if (num === '1') {
-      setOrigin(code)
-    } else if (num === '2') {
-      setDestination(code)
-    }
+    setCode(code);
   }
   return (
     <div className='searchContainer'>

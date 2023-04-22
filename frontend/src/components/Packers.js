@@ -11,6 +11,8 @@ function Packers() {
   const navigate = useNavigate();
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
+  const [originstate, setOriginstate] = useState('');
+  const [destinationstate, setDestinationstate] = useState('');
   function handleSubmit(e) {
     e.preventDefault();
     navigate(`/services?origin=${origin}&destination=${destination}`)
@@ -20,8 +22,8 @@ function Packers() {
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
       <div className='merge'>
         <div className='searchBox'>
-          <Searchbar placeholder='From' setOrigin={setOrigin} setDestination={setDestination} num='1' />
-          <Searchbar placeholder='To' setOrigin={setOrigin} setDestination={setDestination} num='2' />
+          <Searchbar placeholder='From' setValue={setOriginstate} value={originstate} setCode={setOrigin} />
+          <Searchbar placeholder='To' setValue={setDestinationstate} value={destinationstate} setCode={setDestination} />
         </div>
         <div>
           <a href="/services"><button id='but' type="button" className="btn btn-danger" onClick={handleSubmit}>Submit</button></a>

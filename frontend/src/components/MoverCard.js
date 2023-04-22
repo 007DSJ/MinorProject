@@ -1,11 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import authService from "../services/authService";
 
 function MoverCard(props) {
     const navigate = useNavigate();
+    const isLoggedIn = authService.getCurrentUser();
+
     function handleClick(e) {
         e.preventDefault();
-        navigate(`/services/${props.id}`)
+        navigate(`/services/${props.id}?origin=${props.origin}&destination=${props.destination}`)
     }
 
     return (
@@ -18,7 +21,7 @@ function MoverCard(props) {
                     <div class="card-body">
                         <h5 class="card-title">{props.name}</h5>
                         <p class="card-text">{props.desc}</p>
-                        <button type="button" class="btn btn-primary" onClick={handleClick}>View</button>
+                        {isLoggedIn && <button type="button" class="btn btn-primary" onClick={handleClick}>View</button>}
                     </div>
                     <div class="rating">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />

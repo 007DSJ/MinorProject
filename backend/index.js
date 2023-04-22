@@ -10,6 +10,7 @@ const passportLocal = require('passport-local').Strategy;
 const passportJWT = require('passport-jwt').Strategy;
 const extractJWT = require('passport-jwt').ExtractJwt;
 const dbUrl = 'mongodb://127.0.0.1:27017/minorproject';
+const mail = require('./controllers/mail');
 
 const jwtSecret = 'minorproject';
 const secret = 'secrethaivronahibataaunga';
@@ -129,6 +130,8 @@ app.get('/movers/:id', catchAsync(async (req, res) => {
         res.status(500).send('Internal server error');
     }
 }))
+
+app.get('/mail', mail)
 
 app.post('/movers', catchAsync(async (req, res) => {
     const mover = new Mover(req.body);
