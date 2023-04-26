@@ -145,3 +145,5 @@ app.all('*', (req, res) => {
 app.listen(port, () => {
     console.log('Listening on port 1808');
 })
+
+module.exports = app;
