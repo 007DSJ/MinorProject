@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const session = require('express-session');
@@ -9,11 +13,12 @@ const passport = require('passport');
 const passportLocal = require('passport-local').Strategy;
 const passportJWT = require('passport-jwt').Strategy;
 const extractJWT = require('passport-jwt').ExtractJwt;
-const dbUrl = 'mongodb://127.0.0.1:27017/minorproject';
+// const dbUrl = 'mongodb://127.0.0.1:27017/minorproject';
+const dbUrl = process.env.DB_URL;
 const mail = require('./controllers/mail');
 
-const jwtSecret = 'minorproject';
-const secret = 'secrethaivronahibataaunga';
+const jwtSecret = process.env.JWT_SECRET;
+const secret = process.env.SECRET;
 
 app.use(session({ secret, saveUninitialized: true, resave: false }));
 
@@ -72,7 +77,7 @@ app.use(express.urlencoded({ extended: true }));    // to parse requests
 app.use(express.json());                            // to parse requests
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
-const port = 1808;
+const port = process.env.PORT || 1808;
 
 app.get('/', (req, res) => {
     res.send('Hello there!');
@@ -113,7 +118,7 @@ app.get('/movers', catchAsync(async (req, res) => {
     }
 }))
 
-app.get('/movers/:id', catchAsync(async (req, res) => {
+app.get('/movers/:id', verifyUser, catchAsync(async (req, res) => {
     try {
         const { id } = req.params;
         const mover = await Mover.findById(id);
@@ -133,12 +138,9 @@ app.get('/movers/:id', catchAsync(async (req, res) => {
 
 app.get('/mail', mail)
 
-app.post('/movers', catchAsync(async (req, res) => {
-    const mover = new Mover(req.body);
-    mover.img = 'https://source.unsplash.com/collection/3850816/360x240';
-    await mover.save();
-    res.send('Done');
-}))
+app.all('*', (req, res) => {
+    res.status(500).send('Wrong path!!');
+})
 
 app.listen(port, () => {
     console.log('Listening on port 1808');
