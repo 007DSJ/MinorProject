@@ -36,7 +36,7 @@ function MoverView(props) {
     <div className="flex-container">
       <div className="flex-child magenta">
         <div>
-          <img src={mover.img} alt="MoverImg" />
+          <img className="moverImage" src={mover.img} alt="MoverImg" />
           <h3>{mover.name}</h3>
           <div className="rating">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />

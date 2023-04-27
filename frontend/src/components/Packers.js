@@ -31,13 +31,13 @@ function Packers() {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={image} alt="Logo" width="100%" height="500px" />
+          <img className='moverImage' src={image} alt="Logo" width="100%" height="500px" />
         </div>
         <div className="carousel-item">
-          <img src={image2} alt="img2" width="100%" height="500px" />
+          <img className='moverImage' src={image2} alt="img2" width="100%" height="500px" />
         </div>
         <div className="carousel-item">
-          <img src={image3} alt="img2" width="100%" height="500px" />
+          <img className='moverImage' src={image3} alt="img2" width="100%" height="500px" />
         </div>
       </div>
     </div>

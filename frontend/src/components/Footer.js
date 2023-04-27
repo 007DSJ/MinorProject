@@ -22,11 +22,11 @@ function Footer() {
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>Swift Surf
+                                <i class="fas fa-gem me-3"></i>Pack&Mov
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                dolor sit amet, consectetur adipisicing elit.
+                                Pack&Mov is one of India's trusted relocation service booking portals providing the highest standards of relocation
+                                and transport related services and also aiming in developing safe and cost-efficient relocation and transportation solutions for customers.
                             </p>
                         </div>
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -59,7 +59,7 @@ function Footer() {
             </section>
             <div class="text-center p-4">
                 © 2023 Copyright:
-                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                <a class="text-reset fw-bold" >Pack&Mov</a>
             </div>
         </footer>
     )
