@@ -104,7 +104,7 @@ input {
 
 .flex-container {
     display: flex;
-    
+
 }
 
 .flex-child {
@@ -112,26 +112,26 @@ input {
     border: 2px solid black;
     margin: 10px;
     padding: 20px;
-}  
+}
 
 .flex-child:first-child {
     text-align: center;
-} 
+}
 
 .search-bar-container {
     position: relative;
     width: 300px;
-  }
-  
-  .search-bar-container input[type="text"] {
+}
+
+.search-bar-container input[type="text"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
-  }
-  
-  .search-results {
+}
+
+.search-results {
     position: absolute;
     top: 40px;
     left: 0;
@@ -145,14 +145,96 @@ input {
     overflow-y: auto;
     max-height: 200px;
     z-index: 10;
-  }
-  
-  .search-results li {
+}
+
+.search-results li {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .search-results li:hover {
+}
+
+.search-results li:hover {
     background-color: #f2f2f2;
-  }
+}
+
+
+/* how we operate timeline */
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline {
+    position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: purple;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timeline {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 5px solid purple;
+    top: 60px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+/* Place the container to the right */
+.timeline-right {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+    left: -12px;
+}
+
+/* FAQ */
+
+.question {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.icons {
+    display: flex;
+}
+
+.whyus {
+    margin-top: 20px;
+}
+
+@media (max-width:1200px) {
+    .moverImage {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+}

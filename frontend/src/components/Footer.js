@@ -17,15 +17,17 @@ function Footer() {
                     <a href="" className="me-4 text-reset"><i className="fa fa-github"></i></a>
                 </div>
             </section>
+            
             <section className="">
                 <div className="container text-center text-md-start mt-5">
                     <div className="row mt-3">
                         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">
-                                <i className="fas fa-gem me-3"></i>Swift Surf
+                                <i className="fas fa-gem me-3"></i>Pack&Move
                             </h6>
                             <p>
                                 For all your moving solutions.
+
                             </p>
                         </div>
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -58,7 +60,9 @@ function Footer() {
             </section>
             <div className="text-center p-4">
                 © 2023 Copyright:
-                <a className="text-reset fw-bold" href="https://mdbootstrap.com/">Pack&Move</a>
+
+                <a class="text-reset fw-bold" >Pack&Move</a>
+
             </div>
         </footer>
     )

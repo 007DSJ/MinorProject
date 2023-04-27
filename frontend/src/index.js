@@ -11,6 +11,7 @@ import Services from './components/Services';
 // import AddMover from './components/AddMover';
 import CheckOut from './components/CheckOut';
 import MoverView from './components/MoverView';
+import AboutUs from './components/AboutUs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,12 +20,13 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<App />} />
-        <Route path='services' element={<Services/>}/>
+        <Route path='services' element={<Services />} />
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<SignUp />} />
         {/* <Route path='addmover' element={<AddMover />} /> */}
         <Route path='checkout' element={<CheckOut />} />
-        <Route path='services/:id' element={<MoverView/>} />
+        <Route path='services/:id' element={<MoverView />} />
+        <Route path='aboutus' element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
     <Footer />
