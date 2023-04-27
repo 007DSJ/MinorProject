@@ -157,6 +157,80 @@ input {
     background-color: #f2f2f2;
 }
 
+
+/* how we operate timeline */
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline {
+    position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: purple;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timeline {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 5px solid purple;
+    top: 60px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+/* Place the container to the right */
+.timeline-right {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+    left: -12px;
+}
+
+/* FAQ */
+
+.question {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.icons {
+    display: flex;
+}
+
+.whyus {
+    margin-top: 20px;
+}
+
 @media (max-width:1200px) {
     .moverImage {
         object-fit: contain;

@@ -25,6 +25,11 @@ function Navbar() {
             <li class="nav-item">
               <a class="nav-link active" href="/services">Services</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="/aboutus">About Us</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link active" href="/checkout">CheckOut</a>
             </li>

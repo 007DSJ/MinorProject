@@ -25,8 +25,7 @@ function Footer() {
                                 <i class="fas fa-gem me-3"></i>Pack&Mov
                             </h6>
                             <p>
-                                Pack&Mov is one of India's trusted relocation service booking portals providing the highest standards of relocation
-                                and transport related services and also aiming in developing safe and cost-efficient relocation and transportation solutions for customers.
+                                Pack&Mov is a service booking portals providing the highest standards of relocation and transport related services for customers.
                             </p>
                         </div>
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
