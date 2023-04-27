@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useParams } from 'react-router';
 import BookMover from './BookMover';
 import authService from '../services/authService';
+import authHeader from '../services/authHeader';
 import { Navigate } from 'react-router';
 
 function MoverView(props) {
@@ -17,7 +18,7 @@ function MoverView(props) {
 
   const fetchMover = async () => {
     try {
-      const response = await axios.get(`/movers/${id}`);
+      const response = await axios.get(`${process.env.REACT_APP_API}/movers/${id}`, { headers: authHeader() });
       setMover(response.data);
     } catch (err) {
       console.log(err);
@@ -40,12 +41,12 @@ function MoverView(props) {
           <h3>{mover.name}</h3>
           <div className="rating">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-            <span>Rating : </span>
+            {/* <span>Rating : </span>
             <span className="fa fa-star checked" id="rating"></span>
             <span className="fa fa-star checked" id="rating"></span>
             <span className="fa fa-star checked" id="rating"></span>
             <span className="fa fa-star"></span>
-            <span className="fa fa-star"></span>
+            <span className="fa fa-star"></span> */}
           </div>
 
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
