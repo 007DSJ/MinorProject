@@ -1,7 +1,4 @@
 import React from 'react';
-import image from '../imgs/IMG2.jpeg';
-import image2 from '../imgs/IMG3.jpeg';
-import image3 from '../imgs/IMG4.jpeg';
 import Searchbar from './Searchbar';
 import '../App.css';
 import { useState } from 'react';
@@ -31,13 +28,14 @@ function Packers() {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img className='moverImage' src={image} alt="Logo" width="100%" height="500px" />
+
+          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Logo" width="100%" height="500px" />
         </div>
         <div className="carousel-item">
-          <img className='moverImage' src={image2} alt="img2" width="100%" height="500px" />
+          <img src="https://images.unsplash.com/photo-1562811950-41d4a4944a4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="img2" width="100%" height="500px" />
         </div>
         <div className="carousel-item">
-          <img className='moverImage' src={image3} alt="img2" width="100%" height="500px" />
+          <img src="https://images.unsplash.com/photo-1610853165086-2d50fed290b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="img3" width="100%" height="500px" />
         </div>
       </div>
     </div>

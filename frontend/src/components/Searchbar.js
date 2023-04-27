@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Data from "./Data.json";
 
-function Searchbar({ placeholder, setValue, value, setCode}) {
+function Searchbar({ placeholder, setValue, value, setCode }) {
   const onChange = (e) => {
     setValue(e.target.value);
   }

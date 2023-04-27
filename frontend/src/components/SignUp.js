@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import authService from "../services/authService";
 
 function SignUp() {
-
+    const formRef = useRef(null);
     const [username, setUserame] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
@@ -22,31 +22,36 @@ function SignUp() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        console.log(username, password, email);
-        const result = {
-            username,
-            password,
-            email
-        }
-        axios.defaults.withCredentials = true;
-        const response = await axios.post('/signup', result);
-        await authService.login(username, password).then(
-            () => {
-                navigate('/');
-                window.location.reload();
-            },
-            error => {
-                console.log(error);
+        if (formRef.current.checkValidity()) {
+            console.log(username, password, email);
+            const result = {
+                username,
+                password,
+                email
             }
-        );
-        navigate('/');
-        window.location.reload();
+            axios.defaults.withCredentials = true;
+            const response = await axios.post(`${process.env.REACT_APP_API}/signup`, result);
+            await authService.login(username, password).then(
+                () => {
+                    navigate('/');
+                    window.location.reload();
+                },
+                error => {
+                    console.log(error);
+                }
+            );
+            navigate('/');
+            window.location.reload();
+        } else {
+            e.stopPropagation();
+            formRef.current.classList.add('was-validated');
+        }
     }
 
     return (<div><div className="row">
         <div className="col-6 offset-3">
             <h1 className="text-center">Sign Up</h1>
-            <form action="/signup" className="needs-validation" noValidate method="POST" onSubmit={handleSubmit}>
+            <form action="/signup" ref={formRef} className="needs-validation" noValidate method="POST" onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="username">Username</label>
                     <input className="form-control" type="text" name="username" id="username" required autoFocus onChange={handleUsername} />

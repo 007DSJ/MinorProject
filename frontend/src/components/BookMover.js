@@ -30,7 +30,7 @@ function BookMover(props) {
 
     async function handleConfirm(e) {
         e.preventDefault();
-        axios.get('/mail')
+        axios.get(`${process.env.REACT_APP_API}/mail`)
     }
 
     return (
@@ -45,7 +45,7 @@ function BookMover(props) {
                         <div className="modal-body">
                             <div className="col-6 offset-3">
                                 <div className="mb-3">
-                                    <label className="form-label" for="origin">Origin</label>
+                                    <label className="form-label" htmlFor="origin">Origin</label>
                                     <div id="origin" className="origin">
                                         <Box
                                             states={props.origin}
@@ -57,7 +57,7 @@ function BookMover(props) {
                                     </div>
                                 </div>
                                 <div className="mb-3">
-                                    <label className="form-label" for="password">Destination</label>
+                                    <label className="form-label" htmlFor="password">Destination</label>
                                     <Box
                                         states={props.destination}
                                         key={2}

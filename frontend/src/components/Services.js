@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router';
 import MoverCard from './MoverCard';
 import '../App.css'
 
@@ -9,15 +8,10 @@ function Services() {
   const params = new URLSearchParams(window.location.search);
   const origin = params.get('origin');
   const destination = params.get('destination');
-  const navigate = useNavigate();
-
-  function handleClick() {
-    navigate('/addmover');
-  }
 
   const fetchMovers = async () => {
     try {
-      const response = await axios("/movers", { params: { origin, destination } });
+      const response = await axios(`${process.env.REACT_APP_API}/movers`, { params: { origin, destination } });
       setMovers(response.data);
     } catch (err) {
       console.log(err);
@@ -40,7 +34,6 @@ function Services() {
         destination={destination}
       />
     ))}
-    <button className="btn btn-info" onClick={handleClick}>Add new</button>
   </div>)
 }
 

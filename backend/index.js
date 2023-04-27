@@ -52,18 +52,19 @@ passport.deserializeUser(User.deserializeUser());
 const opts = {};
 opts.jwtFromRequest = extractJWT.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = jwtSecret;
-passport.use(new passportJWT(opts, function (jwt_payload, done) {
-    User.findOne({ _id: jwt_payload._id }, function (err, user) {
-        if (err) {
-            return done(err, false);
-        }
+passport.use(new passportJWT(opts, async function (jwt_payload, done) {
+    try {
+        const user = await User.findOne({ _id: jwt_payload._id });
         if (user) {
             return done(null, user);
         } else {
             return done(null, false);
         }
-    })
-}))
+    } catch (err) {
+        return done(err, false);
+    }
+}));
+
 
 const getToken = user => {
     return jwt.sign(user, jwtSecret, {
@@ -75,7 +76,7 @@ const verifyUser = passport.authenticate('jwt', { session: false });
 
 app.use(express.urlencoded({ extended: true }));    // to parse requests
 app.use(express.json());                            // to parse requests
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: process.env.CORS_POLICY, credentials: true }));
 
 const port = process.env.PORT || 1808;
 
