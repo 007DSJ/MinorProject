@@ -19,8 +19,12 @@ function Packers() {
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
       <div className='merge'>
         <div className='searchBox'>
-          <Searchbar placeholder='From' setValue={setOriginstate} value={originstate} setCode={setOrigin} />
-          <Searchbar placeholder='To' setValue={setDestinationstate} value={destinationstate} setCode={setDestination} />
+          <div className='from'>
+            <Searchbar placeholder='From' setValue={setOriginstate} value={originstate} setCode={setOrigin} />
+          </div>
+          <div className='to'>
+            <Searchbar placeholder='To' setValue={setDestinationstate} value={destinationstate} setCode={setDestination} />
+          </div>
         </div>
         <div>
           <a href="/services"><button id='but' type="button" className="btn btn-danger" onClick={handleSubmit}>Submit</button></a>

@@ -17,7 +17,7 @@ function Footer() {
                     <a href="" className="me-4 text-reset"><i className="fa fa-github"></i></a>
                 </div>
             </section>
-            
+
             <section className="">
                 <div className="container text-center text-md-start mt-5">
                     <div className="row mt-3">
@@ -26,7 +26,9 @@ function Footer() {
                                 <i className="fas fa-gem me-3"></i>Pack&Move
                             </h6>
                             <p>
-                                For all your moving solutions.
+                                The only place you need for re-locating to your new place.
+                                House Shifting ,vehicle transportation and custom clearing we do it all.
+                                Supervised Packaging to ensure safety of the goods.
 
                             </p>
                         </div>
@@ -50,10 +52,10 @@ function Footer() {
                         </div>
                         <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i className="fas fa-home me-3"></i>KP-14,Campus-12,KIIT University,Patia</p>
-                            <p><i className="fas fa-envelope me-3"></i>email@gmail.com</p>
-                            <p><i className="fas fa-phone me-3"></i>+919090123456</p>
-                            <p><i className="fas fa-print me-3"></i>+918340584200</p>
+                            <p><i className="fa fa-home me-3"></i>KP-14,Campus-12,KIIT University,Patia</p>
+                            <p><i className="fa fa-envelope me-3"></i>email@gmail.com</p>
+                            <p><i className="fa fa-phone me-3"></i>+919876543211</p>
+                            <p><i className="fa fa-phone me-3"></i>+911123456789</p>
                         </div>
                     </div>
                 </div>
