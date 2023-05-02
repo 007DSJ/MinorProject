@@ -2,11 +2,19 @@ import React from 'react'
 import Data from "./Data.json";
 
 function Searchbar({ placeholder, setValue, value, setCode }) {
+  function getStateCode(stateLabel) {
+    const stateObj = Data.find(state => state.label === stateLabel);
+    if (stateObj) {
+      return stateObj.name;
+    }
+    return null; //return null if no state found
+  }
   const onChange = (e) => {
     setValue(e.target.value);
   }
-  const onSearch = (searchTerm, code) => {
+  const onSearch = (searchTerm) => {
     setValue(searchTerm);
+    const code = getStateCode(searchTerm);
     setCode(code);
   }
   return (
@@ -23,7 +31,7 @@ function Searchbar({ placeholder, setValue, value, setCode }) {
         })
           // .slice(0,5) (to be used when dropdown is very long)
           .map((item) => (
-            <div onClick={() => onSearch(item.label, item.name)} className='dropDownRow' key={item.label}>{item.label}
+            <div onClick={() => onSearch(item.label)} className='dropDownRow' key={item.label}>{item.label}
             </div>
           ))}
       </div>

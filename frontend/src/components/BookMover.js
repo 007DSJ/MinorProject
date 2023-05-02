@@ -5,7 +5,7 @@ import axios from "axios";
 function BookMover(props) {
     const [origin, setOrigin] = useState("");
     const [destination, setDestination] = useState("");
-    const [confirmation, setConfirmation] = useState("")
+    const [confirmation, setConfirmation] = useState("Please wait...");
     const token = process.env.REACT_APP_MAPBOX_TOKEN;
 
     function calculateCost(dist) {

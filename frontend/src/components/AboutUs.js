@@ -15,9 +15,9 @@ function aboutus() {
                 <section className='about-us pb-2'>
                     <div >
                         <h1 className='text-center pb-4 pt-4'>About Us</h1>
-                        <p>Pack&Mov is one of India's trusted relocation service booking portals providing the highest standards of relocation and transport related services and also aiming in developing safe and cost-efficient relocation and transportation solutions for customers. Our goal is to work as a bridge between customers and professional logistics & transport companies (including packers and movers) to foster the culture of safety, service and trust.</p>
-                        <p>The packers and movers provided by Pack&Mov are experienced and knowledgeable professionals who have the skills and equipment needed to safely and efficiently move customer's possessions from one location to another. </p>
-                        <p>In conclusion, Pack&Mov is a one-stop shop for all customer's home and event-related needs. With a range of services designed to make moving, interior design, and property management as stress-free as possible, Pack&Mov is the perfect choice for anyone who needs a little extra help with their homes and events.</p>
+                        <p>Pack&Move is one of India's trusted relocation service booking portals providing the highest standards of relocation and transport related services and also aiming in developing safe and cost-efficient relocation and transportation solutions for customers. Our goal is to work as a bridge between customers and professional logistics & transport companies (including packers and movers) to foster the culture of safety, service and trust.</p>
+                        <p>The packers and movers provided by Pack&Move are experienced and knowledgeable professionals who have the skills and equipment needed to safely and efficiently move customer's possessions from one location to another. </p>
+                        <p>In conclusion, Pack&Move is a one-stop shop for all customer's home and event-related needs. With a range of services designed to make moving, interior design, and property management as stress-free as possible, Pack&Move is the perfect choice for anyone who needs a little extra help with their homes and events.</p>
                     </div>
 
                     {/* <div >
@@ -43,7 +43,7 @@ function aboutus() {
                             <div className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">Safe & Compliance</h5>
-                                    <p className="card-text">Pack&Mov relocate your households with complete safety and assurance. Get extra assurance with insurance,
+                                    <p className="card-text">Pack&Move relocates your household with complete safety and assurance. Get extra assurance with insurance,
                                         high-quality packing materials and skilled human resources.</p>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ function aboutus() {
                                 <div className="card-body">
                                     <h5 className="card-title">Cost Saving</h5>
                                     <p className="card-text">The right type of packing material respective to goods from a skilled and trained workforce,
-                                        transport chain and modern technology will save money. Right, consult for moving to make it easier.</p>
+                                        transport chain and modern technology will save money. Right, consultation for moving to make it easier.</p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ function aboutus() {
                                 <div className="card-body">
                                     <h5 className="card-title">End to End Service Solution</h5>
                                     <p className="card-text">Starting from scratch to settle at your destination we offer complete services where you can
-                                        relocate your households, furniture, electronics, and vehicles to your living plants and pets.</p>
+                                        relocate your household, furniture, electronics, and vehicles to your new place.</p>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@ function aboutus() {
                             <div className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">Skilled Staff & Premium Packing Material</h5>
-                                    <p className="card-text">Pack&Mov solving packing and moving issues with their well-trained
+                                    <p className="card-text">Pack&Move solving packing and moving issues with their well-trained
                                         staff and world-class packing materials. We use multilayer packing for the safest relocation</p>
                                 </div>
                             </div>
